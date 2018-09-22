@@ -25,7 +25,7 @@ for $string (@line) {
     $faculty = $1;
     #print "$beforeString";
     if ($beforeString =~ /href\=\"(.*?)\"/){
-      print "$1\n"
+      print "$1\n";
       $facToURL{$faculty} = $1;  
     }
   }

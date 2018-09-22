@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>via - a degree outliner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+
+    body {
+      min-height: 100%;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    th {
+      font-size: 35px;
+      text-align: center;
+      width: 10%;
+      height: 10%;
+    }
+
+    tr {
+      font-size: 20px;
+      text-align: center;
+      width:10%;
+      height:100px;
+    }
+
+    #footer {
+      background-color: #2010434;
+      padding: 17.5px;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {
+      height: 25%px;
+    }
+      
+    .contentt {
+      min-height: 700px;
+    }
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      text-align: center;
+      font-size:20px;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body style="min-height: 100%">
+  
+<div class="text-center">    
+  <div class="row content">
+    <div class="text-center"> 
+      <h1 align="center">via ⇉</h1>
+      <p style="font-size:25px">Search for your degree. We'll do the rest.</p>
+       <select style="width:25%">
+          <option value="" disabled selected>Select faculty</option>
+          <option value="arbitrary">Arbitrary</option>
+          <option value="unsw">UNSW</option>
+          <option value="usyd">USYD</option>
+          <option value="UTS">UTS</option>
+		</select>
+        <select style="width:25%">
+          <option value="" disabled selected>Select school</option>
+          <option value="computerscience">Computer Science</option>
+          <option value="commerce">Commerce</option>
+          <option value="actuarial">Actuarial Studies</option>
+          <option value="Science">Science</option>
+		</select> 
+        <p></p>
+        <select style="width:50.35%">
+          <option value="" disabled selected>Select degree<code></code></option>
+          <option value="double">Double Degree</option>
+          <option value="triple">Triple Degree</option>
+          <option value="quadruple">Quadruple Degree</option>
+          <option value="pentuple">Pentuple Degree</option>
+		</select> 
+      <hr>
+    </div>
+  </div>
+  <div class="contentt" align="center">
+  	<table width=90%>
+      <tr style="font-style: italic">
+        <th>Y1 S1</th>
+        <th>Y1 S2</th>
+        <th>Y1 S3</th>
+        <th>Y2 S1</th>
+        <th>Y2 S2</th>
+        <th>Y2 S3</th>
+        <th>Y3 S1</th>
+        <th>Y3 S2</th>
+        <th>Y3 S3</th>
+      </tr>
+      <tr>
+        <td>MECH1501<p style="font-size: 15px">Mechanical Engineering</p></td>
+        <td>MECH1551</td>
+        <td>MECH1201</td>
+        <td>MECH1401</td>
+        <td>MECH1490</td>
+        <td>MECH1869</td>
+        <td>MECH1490</td>
+        <td>MECH6089</td>
+        <td>MECH6400</td>
+      </tr>
+      <tr>
+        <td>MECH1501</td>
+        <td>MECH1551</td>
+        <td>MECH1201</td>
+        <td>MECH1401</td>
+        <td>MECH1490</td>
+        <td>MECH1869</td>
+        <td>MECH1490</td>
+        <td>MECH6089</td>
+        <td>MECH6400</td>
+      </tr>
+      <tr>
+        <td>MECH1501</td>
+        <td>MECH1551</td>
+        <td>MECH1201</td>
+        <td>MECH1401</td>
+        <td>MECH1490</td>
+        <td>MECH1869</td>
+        <td>MECH1490</td>
+        <td>MECH6089</td>
+        <td>MECH6400</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<footer id="footer">
+  <p>Made by Danny Guo, Thomas Ly, and Henry Phung</p>
+</footer>
+
+</body>
+</html>

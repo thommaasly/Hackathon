@@ -9,7 +9,7 @@ my %courses;
 $queryBool = 0;
 for $string (@line) {
   #amount of uoc codes required for degree
-  $UOC =~ /Students must complete ([0-9]*)/g;
+  #$UOC =~ /Students must complete ([0-9]*)/g;
   #gets the url
   if($string =~ /<div data-bucket=\"1\" class=\"m-single-course-wrapper\">/) {
   	#start of line, get start of url of course
@@ -31,9 +31,10 @@ for $string (@line) {
   if($queryBool && $string =~ /<p class="text-color-blue-400 no-margin">(.*?)<\/p>/) {
     $courseDesc = $1;
     $queryBool = 0;
-    $courses{$courseName} = $querystart;
+    $courses{$courseName}{'url'} = $querystart;
+    $courses{$courseName}{'desc'} = $courseDesc;
   }
 
   $beforeString = $string;
 }
-print "$_ $courses{$_}\n" for (keys %courses);
+print "$_ $courses{$_}{'url'} $courses{$_}{'desc'}\n" for (keys %courses);

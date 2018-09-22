@@ -8,7 +8,6 @@ open URL, "wget -q -O- '$URL'|" or die "cannot does\n";
 $facFound = 0;
 #@faculties;
 my $beforeString = "";
-my %facToURL;
 for $string (@line) {
   	#if($string =~ /<h4>Faculty/) {
   	#	$facFound = 1;
@@ -22,11 +21,9 @@ for $string (@line) {
 #	}
   while($string =~ /\<h4\>(.*)\<\/h4\>/g){
     print "$1\n";
-    $faculty = $1;
     #print "$beforeString";
     if ($beforeString =~ /href\=\"(.*?)\"/){
       print "$1\n"
-      $facToURL{$faculty} = $1;  
     }
   }
     $beforeString = $string;

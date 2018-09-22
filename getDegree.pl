@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-$URL = "https://www.handbook.unsw.edu.au/";
+$URL = "https://www.handbook.unsw.edu.au";
 
 
 open URL, "wget -q -O- '$URL'|" or die "cannot does\n";
@@ -24,7 +24,11 @@ while ($line = <URL>) {
 				exit;
 			}
 			if ($line =~ /href\=\"(.*?)\"/){
-				print "$1\n";
+				print "$URL$1\n";
+				$line = <URL>;
+				if($line =~ /\<h4\>(.*)\<\/h4\>/){
+					print "$1\n";
+				}
 			}
 
 		}
